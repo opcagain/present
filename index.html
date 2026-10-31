@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pentanomia-25 Typology 縦軸の提案</title>
+  <!-- Tailwind CSS（元ページと同じ） -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+    .figure {
+      display: grid;
+      grid-template-columns: 2.25rem 3.25rem repeat(5, minmax(0, 1fr)) 4.75rem;
+      gap: 0.125rem;
+      min-width: 600px;
+    }
+    .vtext { writing-mode: vertical-rl; letter-spacing: 0.15em; }
+    /* 縦の矢印（上向き） */
+    .arrow-v { position: relative; width: 2px; background: #6b7280; }
+    .arrow-v::before {
+      content: ""; position: absolute; top: -6px; left: 50%; transform: translateX(-50%);
+      border-left: 6px solid transparent; border-right: 6px solid transparent; border-bottom: 9px solid #6b7280;
+    }
+    /* 横の両矢印 */
+    .arrow-h { position: relative; height: 2px; background: #9ca3af; }
+    .arrow-h::before, .arrow-h::after {
+      content: ""; position: absolute; top: 50%; transform: translateY(-50%);
+      border-top: 5px solid transparent; border-bottom: 5px solid transparent;
+    }
+    .arrow-h::before { left: -2px; border-right: 8px solid #9ca3af; }
+    .arrow-h::after { right: -2px; border-left: 8px solid #9ca3af; }
+  </style>
+</head>
+<body class="p-2 sm:p-4 max-w-2xl mx-auto">
+
+  <!-- ヘッダー（元ページに合わせる） -->
+  <div class="w-full flex flex-row items-end justify-between gap-3 mb-4">
+    <div>
+      <h1 class="text-2xl font-bold tracking-tight text-gray-900">ペンタノミア</h1>
+      <p class="text-xs text-gray-400 font-light">Pentanomia-25 <span class="text-gray-300">Typology</span></p>
+    </div>
+    <div class="text-xs font-semibold text-gray-600">縦軸の提案：世界との距離</div>
+  </div>
+
+  <!-- 図：元の5×5を上下反転（L1が下、L5が上）して書き込み -->
+  <div class="w-full overflow-x-auto mb-6">
+    <div class="figure text-center text-xs" id="figure"></div>
+  </div>
+
+  <!-- 解説 -->
+  <div class="space-y-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
+
+    <section class="p-4 rounded-xl border border-gray-200">
+      <h2 class="font-bold text-gray-900 mb-1">1. 縦軸は「世界との距離」</h2>
+      <p>縦軸を、「自分（心と体）」と「外の世界」との距離として読む。図の下（L1）程世界が近く、上（L5）程世界が遠い。</p>
+    </section>
+
+    <section class="p-4 rounded-xl border border-gray-200">
+      <h2 class="font-bold text-gray-900 mb-1">2. その理由</h2>
+      <p>リビドー発達理論が扱うのは、青年期までの5段階。ただしペンタノミアのL3より上は、それより後の内容に当たる。また、超越的な考え方は老年期だけでなく、思春期〜モラトリアム期にも一時的に現れる場合がある。L5は成長のゴールではなく世界から最も遠い位置に自己がある状態とする。</p>
+    </section>
+
+    <section class="p-4 rounded-xl border border-gray-200">
+      <h2 class="font-bold text-gray-900 mb-2">3. 距離がその人の性質を作る</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
+        <div class="p-3 rounded-lg bg-purple-50 border border-purple-200">
+          <div class="font-bold text-purple-900 mb-1">世界が遠い（上）</div>
+          <p>見える範囲は広く、俯瞰的に考える。その分他者へ共感し難くなり、行動の原動力がなくなりやすい。老人や哲学者と重なる性質。</p>
+        </div>
+        <div class="p-3 rounded-lg bg-red-50 border border-red-200">
+          <div class="font-bold text-red-900 mb-1">世界が近い（下）</div>
+          <p>見える範囲が狭く、自分ごととして考える。主体的な存在である為に行動力が高い。距離が近いからこそ搾取の危機を感じやすい。下に行くほど本能的で、子供と重なる性質。</p>
+        </div>
+      </div>
+      <p>子供や老人と性質が重なるのは、年齢と精神的成長の為ではない。世界との距離がそうさせている。発達も世界が「自分と身の回りの物 → 両親 → 幼稚園で出会う他人…」と拡張される過程として読める。</p>
+    </section>
+
+    <section class="p-4 rounded-xl border border-gray-200">
+      <h2 class="font-bold text-gray-900 mb-1">4. エリクソンの発達課題との対応</h2>
+      <p class="mb-1">L1が乳児期〜幼児期、L2が学童期〜青年期、L3が成人初期、L4が壮年期、L5が老年期に当たる。</p>
+      <p class="mb-2">これは精神的な未熟さを表すものではない。エリクソンが各時期に置いた「育つ力」と、それが上手くいった時・上手くいかなかった時の姿が、世界との距離によって現れる事を表す。</p>
+      <ul class="space-y-1">
+        <li><span class="font-bold text-gray-900">L5：</span>世界が遠い為、自分ごととして向き合うのは「英知」。英知が自分の中で体系付けば、人生の意義を感じられる。体系付かなければ絶望し、人生を嫌悪する。</li>
+        <li><span class="font-bold text-gray-900">L1：</span>世界が近過ぎる為、目に映る物が世界の全て。自分ごととして感じられるのは、自分の肉体と意志。意志が達成されれば、行動の自律性と責任感に繋がる。達成されなければ、恥や罪悪感から極端な行動に出る可能性がある。</li>
+      </ul>
+    </section>
+
+    <section class="p-4 rounded-xl border border-gray-200">
+      <h2 class="font-bold text-gray-900 mb-1">5. マズローの欲求5段階との対応</h2>
+      <p>図の右側の通り、L1が生理的欲求、L5が自己実現の欲求に当たる。上の層にいる人は、下の層の欲求を疎かにしやすい。自己実現に打ち込む人ほど、生理的欲求を後回しにする。</p>
+    </section>
+
+    <section class="p-4 rounded-xl border border-gray-200">
+      <h2 class="font-bold text-gray-900 mb-1">6. 位置は変化する</h2>
+      <p>現在自身がどの位置にいるかは、人生の目的や状況によって変化する。社会に属している時は、集団や社会の位置から物事を見る。家に引き篭もると世界が遠くなりすぎて超越的な考えに傾く事がある。自然の中で生活するようになれば常に身体感覚に頼る事になる。世界から遠い者はしばしば世界に近付く事を望み、世界が近すぎる者はしばしば世界から距離を置きたくなる。</p>
+    </section>
+
+    <section class="p-4 rounded-xl border border-gray-200">
+      <h2 class="font-bold text-gray-900 mb-2">7. 位置毎の世界の見え方</h2>
+      <ul class="space-y-1 mb-2">
+        <li><span class="font-bold text-gray-900">現在状況が上に位置する時：</span>全体が見えるが、下の層の欲求を手放すので、不満が溜まりやすい。</li>
+        <li><span class="font-bold text-gray-900">現在状況が下に位置する時：</span>上が見えない分、気に掛ける欲求も向き合う世界も小さく、幸せを感じやすい。</li>
+        <li><span class="font-bold text-gray-900">隣り合う層同士：</span>一つ上の層にいる者は一つ下の層にいる者よりも少しだけ世界が広く見えているような錯覚をしやすい。だから下の層にいる者を「自分がもう通り過ぎた所に留まっている人」と見做し、見下しやすい。</li>
+      </ul>
+      <p>距離が違う人同士は、助け合う事も出来る。世界との距離が遠い人は肉体的危機に弱く、更に孤独になり易いので、近い人に助けて貰える。世界との距離が近い人は全体を見渡し難いので、遠い人に助けて貰える。</p>
+    </section>
+
+    <section class="p-4 rounded-xl border border-gray-200">
+      <h2 class="font-bold text-gray-900 mb-1">8. 横軸について</h2>
+      <p>横軸（D1〜D5）は「世界への関わり方」として捉えられるが、今回は追加検討していない。</p>
+    </section>
+
+  </div>
+
+  <p class="mt-6 mb-2 text-[10px] text-gray-400">元の理論：<a class="underline" href="https://1948teso471-bop.github.io/-/">Pentanomia-25 Typology</a></p>
+
+  <script>
+    // 元ページのデータ（層・方向性・25タイプの名前）をそのまま使う
+    const layers = [
+      { code: 'L1', name: ['身体・', '本能'], cell: 'bg-red-100 text-red-900 border-red-300', maslow: '生理的' },
+      { code: 'L2', name: ['感情・', '対人'], cell: 'bg-blue-100 text-blue-900 border-blue-300', maslow: '安全' },
+      { code: 'L3', name: ['役割・', '集団'], cell: 'bg-green-100 text-green-900 border-green-300', maslow: '所属と愛' },
+      { code: 'L4', name: ['認知・', 'システム'], cell: 'bg-yellow-100 text-yellow-900 border-yellow-300', maslow: '承認' },
+      { code: 'L5', name: ['超越・', '全体最適'], cell: 'bg-purple-100 text-purple-900 border-purple-300', maslow: '自己実現' },
+    ];
+    const directions = [
+      { code: 'D1', name: ['意志・', '牽引'] },
+      { code: 'D2', name: ['観察・', '防衛'] },
+      { code: 'D3', name: ['実行・', '調達'] },
+      { code: 'D4', name: ['調和・', '維持'] },
+      { code: 'D5', name: ['拡張・', '変化'] },
+    ];
+    const names = [
+      ['身体的野生の覇者', '本能的リスク検知者', '身体求道者・職人', '生理的快適保護者', '感覚的冒険家'],
+      ['情熱的支配者', '対人警戒の洞察者', '献身的サポーター', '感情的共振者', '関係性の変革者'],
+      ['集団の旗振り役', '集団の安全弁', '集団の大黒柱', '集団のクッション', '集団のスカウト'],
+      ['システムの推進者', 'システムの管理者', 'システムの運用者', 'システムの調整者', 'システムの再定義者'],
+      ['グランドデザイナー', '時代を見守る老賢者', '構造構築者', '存在の統合者', '次元超越者'],
+    ];
+
+    const fig = document.getElementById('figure');
+    const put = (html, col, row, cls = '') => {
+      const el = document.createElement('div');
+      el.style.gridColumn = col;
+      el.style.gridRow = row;
+      el.className = cls;
+      el.innerHTML = html;
+      fig.appendChild(el);
+    };
+
+    // 1行目：横軸のラベル
+    put('<div class="flex items-center gap-2 px-2"><div class="arrow-h flex-1"></div><span class="text-[11px] font-bold text-gray-600 whitespace-nowrap">世界への関わり方</span><div class="arrow-h flex-1"></div></div>', '3 / 8', '1', 'pb-1');
+
+    // 2行目：方向性とマズローの見出し
+    directions.forEach((d, i) => put(
+      `<div class="font-bold text-[10px] text-gray-400">${d.code}</div><div>${d.name[0]}</div><div>${d.name[1]}</div>`,
+      String(3 + i), '2', 'p-1 leading-tight font-medium text-gray-700'));
+    put('<div class="font-bold text-[10px] text-gray-400">マズロー</div><div>欲求</div>', '8', '2', 'p-1 leading-tight font-medium text-gray-700 self-end');
+
+    // 3行目：遠い側の端
+    put('<span class="inline-block px-2 py-0.5 rounded-full bg-purple-50 border border-purple-200 text-[10px] font-bold text-purple-900 whitespace-nowrap">老人・哲学者</span>', '1 / 3', '3', 'text-left pb-1');
+
+    // 4〜8行目：L5（上）→ L1（下）
+    [...layers].reverse().forEach((l, r) => {
+      const row = String(4 + r);
+      const li = layers.indexOf(l);
+      put(`<div class="font-bold text-[10px] text-gray-400">${l.code}</div><div>${l.name[0]}</div><div>${l.name[1]}</div>`,
+        '2', row, 'p-1 flex flex-col justify-center font-medium text-gray-700 leading-tight');
+      names[li].forEach((n, di) => put(
+        `<span class="text-[9px] opacity-60 mb-0.5">${l.code}D${di + 1}</span><span class="text-[11px] sm:text-xs leading-tight font-medium">${n}</span>`,
+        String(3 + di), row,
+        `h-16 sm:h-20 p-1 rounded border flex flex-col justify-center items-center text-center ${l.cell}`));
+      put(`<span class="text-[11px] leading-tight font-medium">${l.maslow}</span>`, '8', row,
+        'flex items-center justify-center px-1 rounded border border-dashed border-gray-300 text-gray-600');
+    });
+
+    // 左端：世界との距離（下が近い、上が遠い）
+    put(`<div class="h-full flex flex-col items-center py-1">
+           <span class="text-[11px] font-bold text-gray-700">遠い</span>
+           <div class="flex-1 flex items-center gap-1 mt-3 mb-1">
+             <div class="arrow-v h-full"></div>
+           </div>
+           <span class="text-[11px] font-bold text-gray-700">近い</span>
+         </div>`, '1', '4 / 9', '');
+    put('<span class="vtext text-[11px] font-bold text-gray-600 bg-white py-1">世界との距離</span>', '1', '5 / 8', 'flex items-center justify-center pointer-events-none z-10');
+
+    // 9行目：近い側の端
+    put('<span class="inline-block px-2 py-0.5 rounded-full bg-red-50 border border-red-200 text-[10px] font-bold text-red-900 whitespace-nowrap">子供・本能的人間</span>', '1 / 3', '9', 'text-left pt-1');
+  </script>
+</body>
+</html>
